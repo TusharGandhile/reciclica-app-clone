@@ -30,6 +30,10 @@ const routes: Routes = [
   {
     path: 'my-pickup-calls',
     loadChildren: () => import('./pages/my-pickup-calls/my-pickup-calls.module').then( m => m.MyPickupCallsPageModule)
+  },
+  {
+    path: 'pickup-call-card',
+    loadChildren: () => import('./components/pickup-call-card/pickup-call-card.module').then( m => m.PickupCallCardPageModule)
   }
 ];
 
