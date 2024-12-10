@@ -23,6 +23,6 @@
         <ion-icon name="trophy" slot="start" color="warning"></ion-icon>
         <ion-label color="success">$ {{moneyValue}}</ion-label>
       </ion-item>
-      <ion-button *ngIf="hasFooter" color="success" fill="clear" size="full">See all..</ion-button>
+      <ion-button *ngIf="hasFooter" color="success" fill="clear" size="full" (click)="seeAllPickupCalls()">See all..</ion-button>
   </ion-card-content>
 </ion-card>

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output, output } from '@angular/core';
 
 @Component({
   selector: 'app-pickup-call-card',
@@ -15,9 +15,13 @@ export class PickupCallCardPage implements OnInit {
   @Input() notes: string = '';
   @Input() moneyValue: string = '';
 
+  @Output() seeAllBtnClicked = new EventEmitter<string>();
   constructor() { }
 
   ngOnInit() {
   }
 
+  seeAllPickupCalls() {
+    this.seeAllBtnClicked.emit('see all btn clicked');
+  }
 }
