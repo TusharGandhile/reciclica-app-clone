@@ -29,4 +29,9 @@ describe('LoginPage', () => {
     component.register();
     expect(router.navigate).toHaveBeenCalledWith(['register']);
   });
+
+  it('should create login form on init', ()=>{
+    component.ngOnInit();
+    expect(component.form).not.toBeUndefined();
+  })
 });
